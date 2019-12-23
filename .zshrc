@@ -28,3 +28,7 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-
 
 # Other
 setopt prompt_subst
+
+# Load zsh plugins
+# antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
+source ~/.zsh_plugins.sh
