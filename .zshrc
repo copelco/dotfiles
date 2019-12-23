@@ -32,3 +32,5 @@ setopt prompt_subst
 # Load zsh plugins
 # antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
 source ~/.zsh_plugins.sh
+
+eval "$(pyenv init -)"
