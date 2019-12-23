@@ -30,6 +30,7 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-
 setopt prompt_subst
 
 # https://denysdovhan.com/spaceship-prompt/
+SPACESHIP_PACKAGE_SHOW=false
 SPACESHIP_EXEC_TIME_SHOW=true
 SPACESHIP_EXIT_CODE_SHOW=true
 
@@ -48,3 +49,6 @@ fi
 if which pyenv-virtualenv-init > /dev/null; then
   eval "$(pyenv virtualenv-init -)"
 fi
+
+# libpq
+export PATH="/usr/local/opt/libpq/bin:$PATH"
