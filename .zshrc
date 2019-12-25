@@ -42,15 +42,10 @@ source ~/.zsh_plugins.sh
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+lazyload 'source "$(brew --prefix nvm)/nvm.sh"' nvm
 
 # pyenv 
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
-if which pyenv-virtualenv-init > /dev/null; then
-  eval "$(pyenv virtualenv-init -)"
-fi
+ZSH_PYENV_LAZY_VIRTUALENV=true
 
 # libpq
 export PATH="/usr/local/opt/libpq/bin:$PATH"

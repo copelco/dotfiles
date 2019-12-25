@@ -4,3 +4,5 @@ zsh-users/zsh-history-substring-search
 zsh-users/zsh-syntax-highlighting
 denysdovhan/spaceship-prompt
 #bhilburn/powerlevel9k
+qoomon/zsh-lazyload
+davidparsson/zsh-pyenv-lazy
