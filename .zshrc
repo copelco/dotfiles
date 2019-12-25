@@ -34,6 +34,8 @@ SPACESHIP_PACKAGE_SHOW=false
 SPACESHIP_EXEC_TIME_SHOW=true
 SPACESHIP_EXIT_CODE_SHOW=true
 
+autoload -Uz compinit && compinit
+
 # Load zsh plugins
 # antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
 source ~/.zsh_plugins.sh
