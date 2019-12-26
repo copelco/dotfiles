@@ -2,7 +2,8 @@ zsh-users/zsh-autosuggestions
 zsh-users/zsh-completions
 zsh-users/zsh-history-substring-search
 zsh-users/zsh-syntax-highlighting
-denysdovhan/spaceship-prompt
+#denysdovhan/spaceship-prompt
 #bhilburn/powerlevel9k
+romkatv/powerlevel10k
 qoomon/zsh-lazyload
 davidparsson/zsh-pyenv-lazy
