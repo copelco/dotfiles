@@ -49,7 +49,7 @@ source ~/.zsh_plugins.sh
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
-lazyload 'source "$(brew --prefix nvm)/nvm.sh"' nvm
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 
 # pyenv 
 ZSH_PYENV_LAZY_VIRTUALENV=true
