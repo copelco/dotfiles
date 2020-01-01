@@ -3,5 +3,6 @@
     "files.trimFinalNewlines": true,
     "terminal.integrated.fontFamily": "MesloLGS NF",
     "files.trimTrailingWhitespace": true,
-    "workbench.iconTheme": "vscode-icons"
+    "workbench.iconTheme": "vscode-icons",
+    "python.terminal.activateEnvironment": false
 }
