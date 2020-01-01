@@ -4,5 +4,10 @@
     "terminal.integrated.fontFamily": "MesloLGS NF",
     "files.trimTrailingWhitespace": true,
     "workbench.iconTheme": "vscode-icons",
-    "python.terminal.activateEnvironment": false
+    "python.terminal.activateEnvironment": false,
+    "[yaml]":  {
+      "editor.insertSpaces": true,
+      "editor.tabSize": 2,
+      "editor.autoIndent": false
+	}
 }
