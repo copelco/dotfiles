@@ -10,5 +10,6 @@
       "editor.tabSize": 2,
       "editor.autoIndent": "none"
   },
-  "diffEditor.ignoreTrimWhitespace": false
+  "diffEditor.ignoreTrimWhitespace": false,
+  "terminal.integrated.scrollback": 8000
 }
