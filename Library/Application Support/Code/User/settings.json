@@ -11,5 +11,6 @@
       "editor.autoIndent": "none"
   },
   "diffEditor.ignoreTrimWhitespace": false,
-  "terminal.integrated.scrollback": 8000
+  "terminal.integrated.scrollback": 8000,
+  "window.zoomLevel": 0
 }
