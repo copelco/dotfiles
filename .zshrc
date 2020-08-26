@@ -77,6 +77,8 @@ ZSH_PYENV_LAZY_VIRTUALENV=true
 
 # libpq
 export PATH="/usr/local/opt/libpq/bin:$PATH"
+# gnu-sed
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
