@@ -83,3 +83,5 @@ export PATH="/usr/local/opt/libpq/bin:$PATH"
 
 # psql - default to docker PostgreSQL
 export PGHOST=localhost
+
+export EDITOR='code --wait'
