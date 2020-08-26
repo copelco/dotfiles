@@ -85,3 +85,7 @@ export PATH="/usr/local/opt/libpq/bin:$PATH"
 export PGHOST=localhost
 
 export EDITOR='code --wait'
+
+# fix Ansible issue
+# https://github.com/ansible/ansible/issues/32499
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
