@@ -12,5 +12,6 @@
   },
   "diffEditor.ignoreTrimWhitespace": false,
   "terminal.integrated.scrollback": 8000,
-  "window.zoomLevel": 0
+  "window.zoomLevel": 0,
+  "editor.minimap.enabled": false
 }
