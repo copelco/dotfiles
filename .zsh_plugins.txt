@@ -6,4 +6,4 @@ romkatv/powerlevel10k
 qoomon/zsh-lazyload
 davidparsson/zsh-pyenv-lazy
 akarzim/zsh-docker-aliases
-ohmyzsh/ohmyzsh path:plugins/kubectl
+# ohmyzsh/ohmyzsh path:plugins/kubectl
