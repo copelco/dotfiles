@@ -79,15 +79,16 @@ ZSH_PYENV_LAZY_VIRTUALENV=true
 
 arch_name="$(uname -m)"
 
-# libpq
-export PATH="/usr/local/opt/libpq/bin:$PATH"
-# gnu-sed
-export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 if [ "${arch_name}" = "arm64" ]; then
   # xcode python3
   export PATH=${PATH}:~/Library/Python/3.8/bin
   # brew 
   export PATH="/opt/homebrew/bin:$PATH" 
+else
+  # libpq
+  export PATH="/usr/local/opt/libpq/bin:$PATH"
+  # gnu-sed
+  export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
