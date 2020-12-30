@@ -49,6 +49,24 @@ autoload -Uz compinit && compinit
 # antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
 source ~/.zsh_plugins.sh
 
+# determine system architecture
+arch_name="$(uname -m)"
+
+if [ "${arch_name}" = "arm64" ]; then
+  # xcode python3
+  export PATH=${PATH}:~/Library/Python/3.8/bin
+  # brew 
+  export PATH="/opt/homebrew/bin:$PATH"
+  # pyenv git checkout
+  export PYENV_ROOT="$HOME/.pyenv"
+  export PATH="$PYENV_ROOT/bin:$PATH"
+else
+  # libpq
+  export PATH="/usr/local/opt/libpq/bin:$PATH"
+  # gnu-sed
+  export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+fi
+
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
