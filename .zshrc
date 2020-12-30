@@ -65,6 +65,8 @@ else
   export PATH="/usr/local/opt/libpq/bin:$PATH"
   # gnu-sed
   export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+  # pyenv plugin (deprecated)
+  ZSH_PYENV_LAZY_VIRTUALENV=true
 fi
 
 # nvm
@@ -91,9 +93,6 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
-
-# pyenv
-# ZSH_PYENV_LAZY_VIRTUALENV=true
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
