@@ -69,7 +69,7 @@ fi
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s $(brew --prefix nvm)/nvm.sh ] && . $(brew --prefix nvm)/nvm.sh  # This loads nvm
 # place this after nvm initialization!
 autoload -U add-zsh-hook
 load-nvmrc() {
