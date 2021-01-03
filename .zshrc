@@ -55,6 +55,9 @@ if [ "${arch_name}" = "arm64" ]; then
   # pyenv git checkout
   export PYENV_ROOT="$HOME/.pyenv"
   export PATH="$PYENV_ROOT/bin:$PATH"
+  # Python compile
+  export LDFLAGS="-L$(brew --prefix openssl)/lib -L$(brew --prefix zlib)/lib -L$(brew --prefix libffi)/lib"
+  export CPPFLAGS="-I$(brew --prefix openssl)/include -I$(brew --prefix zlib)/include -L$(brew --prefix libffi)/include"
 else
   # libpq
   export PATH="/usr/local/opt/libpq/bin:$PATH"
