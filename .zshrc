@@ -1,3 +1,5 @@
+# direnv
+# export direnv_layout_dir=~/.direnv
 emulate zsh -c "$(direnv export zsh)"
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -52,6 +54,7 @@ if [ "${arch_name}" = "arm64" ]; then
   export PATH=${PATH}:~/Library/Python/3.8/bin
   # brew 
   export PATH="/opt/homebrew/bin:$PATH"
+  alias brewx86='arch --x86_64 /usr/local/Homebrew/bin/brew'
   # pyenv git checkout
   export PYENV_ROOT="$HOME/.pyenv"
   export PATH="$PYENV_ROOT/bin:$PATH"
