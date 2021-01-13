@@ -56,7 +56,7 @@ if [ "${arch_name}" = "arm64" ]; then
   export PYENV_ROOT="$HOME/.pyenv"
   export PATH="$PYENV_ROOT/bin:$PATH"
   # Python compile
-  export LDFLAGS="-L$(brew --prefix openssl)/lib -L$(brew --prefix zlib)/lib -L$(brew --prefix libffi)/lib"
+  export LDFLAGS="-L$(brew --prefix openssl)/lib -L$(brew --prefix zlib)/lib -L/opt/homebrew/Cellar/libffi/3.3/lib"
   export CPPFLAGS="-I$(brew --prefix openssl)/include -I$(brew --prefix zlib)/include -L$(brew --prefix libffi)/include"
   alias brewx86='arch --x86_64 /usr/local/Homebrew/bin/brew'
 else
@@ -101,7 +101,7 @@ emulate zsh -c "$(direnv hook zsh)"
 # psql - default to docker PostgreSQL
 export PGHOST=localhost
 
-export EDITOR='code --wait'
+export EDITOR='code-insiders --wait'
 
 # fix Ansible issue
 # https://github.com/ansible/ansible/issues/32499
