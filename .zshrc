@@ -1,3 +1,5 @@
+export PATH="/opt/homebrew/bin:$PATH"
+
 emulate zsh -c "$(direnv export zsh)"
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
