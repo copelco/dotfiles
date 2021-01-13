@@ -58,6 +58,7 @@ if [ "${arch_name}" = "arm64" ]; then
   # Python compile
   export LDFLAGS="-L$(brew --prefix openssl)/lib -L$(brew --prefix zlib)/lib -L$(brew --prefix libffi)/lib"
   export CPPFLAGS="-I$(brew --prefix openssl)/include -I$(brew --prefix zlib)/include -L$(brew --prefix libffi)/include"
+  alias brewx86='arch --x86_64 /usr/local/Homebrew/bin/brew'
 else
   # libpq
   export PATH="/usr/local/opt/libpq/bin:$PATH"
