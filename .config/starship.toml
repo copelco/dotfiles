@@ -1,2 +1,9 @@
+[aws]
+symbol = " "
+
 [kubernetes]
 disabled = false
+style = "bold blue"
+
+[kubernetes.context_aliases]
+"arn:aws:eks.*/(?P<cluster>[\\w-]+)" = "$cluster"
