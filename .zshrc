@@ -39,55 +39,44 @@ autoload -U bashcompinit
 # antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
 source ~/.zsh_plugins.sh
 
-# determine system architecture
-arch_name="$(uname -m)"
+# xcode python3
+# export PATH=${PATH}:~/Library/Python/3.8/bin
+# brew 
+# export PATH="/opt/homebrew/bin:$PATH"
+alias brewx86='arch --x86_64 /usr/local/Homebrew/bin/brew'
+# pyenv git checkout
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
+export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
+# Python compile
+export LDFLAGS="-L$(brew --prefix openssl)/lib -L$(brew --prefix zlib)/lib -L$(brew --prefix unixodbc)/lib"
+export CPPFLAGS="-I$(brew --prefix openssl)/include -I$(brew --prefix zlib)/include -L$(brew --prefix libffi)/include -L$(brew --prefix unixodbc)/include"
 
-if [ "${arch_name}" = "arm64" ]; then
-  # xcode python3
-  # export PATH=${PATH}:~/Library/Python/3.8/bin
-  # brew 
-  # export PATH="/opt/homebrew/bin:$PATH"
-  alias brewx86='arch --x86_64 /usr/local/Homebrew/bin/brew'
-  # pyenv git checkout
-  export PYENV_ROOT="$HOME/.pyenv"
-  export PATH="$PYENV_ROOT/bin:$PATH"
-  export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
-  # Python compile
-  export LDFLAGS="-L$(brew --prefix openssl)/lib -L$(brew --prefix zlib)/lib -L$(brew --prefix unixodbc)/lib"
-  export CPPFLAGS="-I$(brew --prefix openssl)/include -I$(brew --prefix zlib)/include -L$(brew --prefix libffi)/include -L$(brew --prefix unixodbc)/include"
-else
-  # libpq
-  export PATH="/usr/local/opt/libpq/bin:$PATH"
-  # gnu-sed
-  export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
-  # pyenv plugin (deprecated)
-  ZSH_PYENV_LAZY_VIRTUALENV=true
-fi
 
 # nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s $(brew --prefix nvm)/nvm.sh ] && . $(brew --prefix nvm)/nvm.sh  # This loads nvm
-# place this after nvm initialization!
-autoload -U add-zsh-hook
-load-nvmrc() {
-  local node_version="$(nvm version)"
-  local nvmrc_path="$(nvm_find_nvmrc)"
+# export NVM_DIR="$HOME/.nvm"
+# [ -s $(brew --prefix nvm)/nvm.sh ] && . $(brew --prefix nvm)/nvm.sh  # This loads nvm
+# # place this after nvm initialization!
+# autoload -U add-zsh-hook
+# load-nvmrc() {
+#   local node_version="$(nvm version)"
+#   local nvmrc_path="$(nvm_find_nvmrc)"
 
-  if [ -n "$nvmrc_path" ]; then
-    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+#   if [ -n "$nvmrc_path" ]; then
+#     local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
 
-    if [ "$nvmrc_node_version" = "N/A" ]; then
-      nvm install
-    elif [ "$nvmrc_node_version" != "$node_version" ]; then
-      nvm use >/dev/null 2>&1
-    fi
-  elif [ "$node_version" != "$(nvm version default)" ]; then
-    # echo "Reverting to nvm default version"
-    # nvm use default
-  fi
-}
-add-zsh-hook chpwd load-nvmrc
-load-nvmrc
+#     if [ "$nvmrc_node_version" = "N/A" ]; then
+#       nvm install
+#     elif [ "$nvmrc_node_version" != "$node_version" ]; then
+#       nvm use >/dev/null 2>&1
+#     fi
+#   elif [ "$node_version" != "$(nvm version default)" ]; then
+#     # echo "Reverting to nvm default version"
+#     # nvm use default
+#   fi
+# }
+# add-zsh-hook chpwd load-nvmrc
+# load-nvmrc
 
 # psql - default to docker PostgreSQL
 export PGHOST=localhost
@@ -101,6 +90,8 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 # Created by `pipx` on 2021-06-11 01:26:20
 export PATH="$PATH:/Users/copelco/.local/bin"
 
-eval "$(register-python-argcomplete pipx)"
+# eval "$(register-python-argcomplete pipx)"
+eval "$(pyenv init -)"
+eval "$(pyenv init --path)"
 eval "$(direnv hook zsh)"
 eval "$(starship init zsh)"
