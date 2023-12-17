@@ -1,5 +1,9 @@
 [aws]
-symbol = " "
+symbol = "a "
+
+[gcloud]
+symbol = '🇬️ '
+format = 'on [$symbol$project]($style) '
 
 [kubernetes]
 disabled = false
@@ -7,3 +11,6 @@ style = "bold blue"
 
 [kubernetes.context_aliases]
 "arn:aws:eks.*/(?P<cluster>[\\w-]+)" = "$cluster"
+
+[python]
+format = 'via [${symbol}${pyenv_prefix}($virtualenv )]($style)'

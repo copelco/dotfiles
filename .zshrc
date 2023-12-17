@@ -39,18 +39,13 @@ autoload -U bashcompinit
 # antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
 source ~/.zsh_plugins.sh
 
-# xcode python3
-# export PATH=${PATH}:~/Library/Python/3.8/bin
 # brew 
 # export PATH="/opt/homebrew/bin:$PATH"
-alias brewx86='arch --x86_64 /usr/local/Homebrew/bin/brew'
-# pyenv git checkout
-# export PYENV_ROOT="$HOME/.pyenv"
-# export PATH="$PYENV_ROOT/bin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 # Python compile
-export LDFLAGS="-L$(brew --prefix openssl@1.1)/lib -L$(brew --prefix zlib)/lib -L$(brew --prefix unixodbc)/lib"
-export CPPFLAGS="-I$(brew --prefix openssl@1.1)/include -I$(brew --prefix zlib)/include -L$(brew --prefix libffi)/include -L$(brew --prefix unixodbc)/include"
+export LDFLAGS="-L$(brew --prefix openssl@3)/lib -L$(brew --prefix zlib)/lib -L$(brew --prefix unixodbc)/lib -L$(brew --prefix libssh)/lib -L$(brew --prefix gdal)/lib"
+export CPPFLAGS="-I$(brew --prefix openssl@3)/include -I$(brew --prefix zlib)/include -L$(brew --prefix libffi)/include -L$(brew --prefix unixodbc)/include -L$(brew --prefix libssh)/include -L$(brew --prefix gdal)/include"
+export CFLAGS="-I /opt/homebrew/include -I ext -L /opt/homebrew/lib -lssh"
 
 # psql - default to docker PostgreSQL
 export PGHOST=localhost
@@ -72,8 +67,19 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# eval "$(register-python-argcomplete pipx)"
-eval "$(pyenv init -)"
-eval "$(pyenv init --path)"
 eval "$(direnv hook zsh)"
 eval "$(starship init zsh)"
+
+# ssh-add --apple-use-keychain
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/copelco/projects/caktus-website/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/copelco/projects/caktus-website/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/copelco/projects/caktus-website/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/copelco/projects/caktus-website/google-cloud-sdk/completion.zsh.inc'; fi
+
+export PATH="/Users/copelco/go/bin:$PATH"
+
+export VIRTUAL_ENV_DISABLE_PROMPT=true
+
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
