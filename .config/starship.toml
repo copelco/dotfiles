@@ -1,9 +1,27 @@
 [aws]
 symbol = "a "
 
+[character]
+success_symbol = "[>](bold green)"
+error_symbol = "[x](bold red)"
+vimcmd_symbol = "[<](bold green)"
+
 [gcloud]
 symbol = '🇬️ '
 format = 'on [$symbol$project]($style) '
+
+[git_branch]
+symbol = "git "
+
+[git_commit]
+tag_symbol = " tag "
+
+[git_status]
+ahead = ">"
+behind = "<"
+diverged = "<>"
+renamed = "r"
+deleted = "x"
 
 [kubernetes]
 disabled = false
@@ -11,6 +29,9 @@ style = "bold blue"
 
 [kubernetes.context_aliases]
 "arn:aws:eks.*/(?P<cluster>[\\w-]+)" = "$cluster"
+
+[nodejs]
+symbol = "[⬢](bold green) "
 
 [python]
 format = 'via [${symbol}${pyenv_prefix}($virtualenv )]($style)'
