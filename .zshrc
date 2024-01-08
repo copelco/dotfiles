@@ -35,10 +35,6 @@ autoload -Uz compinit && compinit
 autoload -U bashcompinit
     bashcompinit
 
-# Load zsh plugins
-# antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
-source ~/.zsh_plugins.sh
-
 # brew 
 # export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
