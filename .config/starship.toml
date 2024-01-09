@@ -27,8 +27,9 @@ deleted = "x"
 disabled = false
 style = "bold blue"
 
-[kubernetes.context_aliases]
-"arn:aws:eks.*/(?P<cluster>[\\w-]+)" = "$cluster"
+[[kubernetes.contexts]]
+context_pattern = "arn:aws:eks.*/(?P<cluster>[\\w-]+)"
+context_alias = "$cluster"
 
 [nodejs]
 symbol = "[⬢](bold green) "
