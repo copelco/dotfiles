@@ -81,3 +81,7 @@ export VIRTUAL_ENV_DISABLE_PROMPT=true
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 
 path+=/Applications/Postgres.app/Contents/Versions/16/bin
+
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
