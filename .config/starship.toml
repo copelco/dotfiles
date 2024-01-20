@@ -35,4 +35,4 @@ context_alias = "$cluster"
 symbol = "[⬢](bold green) "
 
 [python]
-format = 'via [${symbol}${pyenv_prefix}($virtualenv )]($style)'
+format = 'via [${symbol}${pyenv_prefix}\(($virtualenv)\) ]($style)'
