@@ -33,6 +33,3 @@ context_alias = "$cluster"
 
 [nodejs]
 symbol = "[⬢](bold green) "
-
-[python]
-format = 'via [${symbol}${pyenv_prefix}\(($virtualenv)\) ]($style)'
