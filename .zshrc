@@ -66,14 +66,6 @@ export NVM_DIR="$HOME/.nvm"
 eval "$(direnv hook zsh)"
 eval "$(starship init zsh)"
 
-# ssh-add --apple-use-keychain
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/copelco/projects/caktus-website/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/copelco/projects/caktus-website/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/copelco/projects/caktus-website/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/copelco/projects/caktus-website/google-cloud-sdk/completion.zsh.inc'; fi
-
 export PATH="/Users/copelco/go/bin:$PATH"
 
 export VIRTUAL_ENV_DISABLE_PROMPT=true
