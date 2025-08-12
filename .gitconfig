@@ -1,6 +1,7 @@
 [user]
   name = Colin Copeland
   email = copelco@caktusgroup.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICMtpiB+QFK/YDEx3qiq62zUcxKOiuIOe1CNmD+NQYKt
 [core]
   excludesfile = ~/.gitignore
   autocrlf = input
@@ -25,3 +26,14 @@
 	textconv = ansible-vault view
 [init]
 	defaultBranch = main
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+	gpgsign = true
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
